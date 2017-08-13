@@ -1,0 +1,20 @@
+<a href = "{%url "MovieListView" %}">Home</a> <br><br>
+
+<center><a href="{% url "CreateNewMovie" object.id%}"><button type="button">Add new movie to this genre</button></a><br><br>
+<a href="{% url "deletegenre" object.id%}"><button type="button">DELETE this genre</button></a><br><br>
+
+<p>List of the movies</p>
+{% for k in a %}
+		{% if k.movie_genre == object %}
+		<br>
+
+            <li><a href ="{% url 'moviedetail' k.id%}">{{k.name}}</li>
+
+		{% endif %}
+
+{% endfor %}
+
+</center>
+
+
+

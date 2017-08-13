@@ -1,0 +1,15 @@
+<a href = "{%url "CreateMovieGenre" %}">Add New Movie Genre</a>
+
+
+<center>
+<h2>Movie Genre</h2><br>
+
+{% for i in object_list %}
+  <li>
+
+    <a href = '{% url "genreshow" i.id %}'>{{i.name}}</a><br><br>
+
+  </li>  
+{% endfor %}
+
+</center>

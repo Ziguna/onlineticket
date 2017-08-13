@@ -1,0 +1,16 @@
+<a href = "{%url "CreateMovieGenre" %}"><button type="button">Add New Movie Genre</button></a>
+
+
+<center>
+<h2>Movie Genre</h2><br>
+
+{% for i in object_list %}
+  <li>
+
+    <a href = '{% url "genreshow" i.id %}'>{{i.name}}</a><br><br>
+
+  </li>  
+{% endfor %}
+
+</center>
+
